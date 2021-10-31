@@ -1,13 +1,5 @@
 package(default_visibility = ["//visibility:public"])
 
-# cc_library(
-#     name = "imgui",
-#     hdrs = glob(["**/*.h",]),
-#     srcs = glob(["**/*.cpp",]),
-#     # includes = ["**/*"],
-#     copts = ["-Wno-deprecated-enum-enum-conversion"],
-# )
-
 cc_library(
     name = "imgui",
     hdrs = [
