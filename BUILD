@@ -11,7 +11,6 @@ cc_library(
         "imstb_truetype.h",
         "backends/imgui_impl_opengl3.h",
         "backends/imgui_impl_opengl3_loader.h",
-
     ],
 
     srcs = [
