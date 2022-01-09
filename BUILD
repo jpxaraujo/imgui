@@ -13,7 +13,6 @@ cc_library(
         "backends/imgui_impl_opengl3.h",
         "backends/imgui_impl_opengl3_loader.h",
     ],
-
     srcs = [
         "imgui.cpp",
         "imgui_draw.cpp",
@@ -22,11 +21,43 @@ cc_library(
         "imgui_tables.cpp",
         "backends/imgui_impl_glfw.cpp",
         "backends/imgui_impl_opengl3.cpp",
-
     ],
     includes = [
         "",
         "backends",
     ],
+    # temporary
+    deps = [
+        "//third_party/glfw",
+    ],
     copts = ["-Wno-deprecated-enum-enum-conversion"],
+
+    # hdrs = glob([
+    #         "*.h",
+    #         "backends/**/*.h",
+    #     ], [
+    #         "*/**/*allegro*",
+    #         "*/**/*android*",
+    #         "*/**/*dx*",
+    #         "*/**/*marmalade*",
+    #         "*/**/*sdl*",
+    #         "*/**/*vulkan*",
+    #         "*/**/*wgpu*",
+    #         "*/**/*win32*",
+    #     ],
+    # ),
+    # srcs = glob([
+    #         "*.cpp",
+    #         "backends/**/*.cpp",
+    #     ], [
+    #         "*/**/*allegro*",
+    #         "*/**/*android*",
+    #         "*/**/*dx*",
+    #         "*/**/*marmalade*",
+    #         "*/**/*sdl*",
+    #         "*/**/*vulkan*",
+    #         "*/**/*wgpu*",
+    #         "*/**/*win32*",
+    #     ],
+    # ),
 )
